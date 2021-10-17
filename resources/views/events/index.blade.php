@@ -1,9 +1,9 @@
 <x-app-layout>
     <section class="text-gray-600 body-font">
-        <div class="container px-5 py-24 mx-auto">
+        <div class="container px-5 pt-24 mb-10 mx-auto">
             <div class="flex flex-wrap -mx-4 -my-8">
                 @foreach ($events as $event)
-                    <div class="py-8 px-4 lg:w-1/3 {{ $event->premium ? 'bg-yellow-200' : '' }}">
+                    <div class="py-8 px-4 lg:w-1/3 {{ $event->premium ? 'bg-blue-200' : '' }}">
                         <div class="h-full flex items-start">
                             <div class="w-12 flex-shrink-0 flex flex-col text-center leading-none">
                                 <span
@@ -37,6 +37,9 @@
                     </div>
                 @endforeach
             </div>
+        </div>
+        <div class="container px-5 pb-5 mx-auto">
+            {{ $events->links() }}
         </div>
     </section>
 </x-app-layout>
